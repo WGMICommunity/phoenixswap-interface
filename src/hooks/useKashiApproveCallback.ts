@@ -1,11 +1,12 @@
+// @ts-ignore
 import { KASHI_ADDRESS } from '@phoenixswapv2/core-sdk'
 import KashiCooker from '../entities/KashiCooker'
-import { signMasterContractApproval } from '../functions'
+import { signMasterContractApproval } from '../functions/kashi'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { setKashiApprovalPending } from '../state/application/actions'
 import { useActiveWeb3React } from '../services/web3'
 import { useBentoBoxContract } from './useContract'
-import { useBentoMasterContractAllowed } from '../state/bentobox/hooks'
+import { useBentoBalance } from '../state/bentobox/hooks'
 import { useDispatch } from 'react-redux'
 import { useKashiApprovalPending } from '../state/application/hooks'
 import { useTransactionAdder } from '../state/transactions/hooks'
@@ -60,7 +61,7 @@ function useKashiApproveCallback(): [
   const masterContract = chainId && KASHI_ADDRESS[chainId]
 
   const pendingApproval = useKashiApprovalPending()
-  const currentAllowed = useBentoMasterContractAllowed(masterContract, account || AddressZero)
+  const currentAllowed = useBentoBalance(masterContract || AddressZero)
   const addTransaction = useTransactionAdder()
 
   // check the current approval status

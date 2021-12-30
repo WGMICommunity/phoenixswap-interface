@@ -1,4 +1,4 @@
-import { useBentoMasterContractAllowed } from '../state/bentobox/hooks'
+// @ts-ignore
 import { useBentoBoxContract } from './useContract'
 import { useActiveWeb3React } from '../services/web3'
 import { useAllTransactions, useTransactionAdder } from '../state/transactions/hooks'
@@ -6,7 +6,8 @@ import { useCallback, useMemo, useState } from 'react'
 import { Contract } from '@ethersproject/contracts'
 import { AddressZero, HashZero } from '@ethersproject/constants'
 import { splitSignature } from '@ethersproject/bytes'
-import { signMasterContractApproval } from '../functions'
+import { signMasterContractApproval } from '../functions/kashi'
+import { useBentoBalance } from '../state/bentobox/hooks'
 
 export enum BentoApprovalState {
   UNKNOWN,
@@ -70,7 +71,7 @@ const useBentoMasterApproveCallback = (
   const { account, chainId, library } = useActiveWeb3React()
   const bentoBoxContract = useBentoBoxContract()
   const addTransaction = useTransactionAdder()
-  const currentAllowed = useBentoMasterContractAllowed(masterContract, account || AddressZero)
+  const currentAllowed = useBentoBalance(masterContract && AddressZero)
   const pendingApproval = useBentoHasPendingApproval(masterContract, account, contractName)
   const [permit, setPermit] = useState<BentoPermit>(null)
 

@@ -29,7 +29,7 @@ function Balances() {
   // Search Setup
   const options = { keys: ['symbol', 'name'], threshold: 0.1 }
   const { result, search, term } = useFuse({
-    data: balances && balances.length > 0 ? balances : [],
+    data: balances && balances ? balances : [],
     options,
   })
 

@@ -1,3 +1,4 @@
+// @ts-ignore
 import { ZERO, calculateGasMargin } from '../functions'
 import { getSignatureWithProviderBentobox, STOP_LIMIT_ORDER_ADDRESS } from '@sushiswap/limit-order-sdk'
 import { setFromBentoBalance, setLimitOrderApprovalPending } from '../state/limit-order/actions'
@@ -9,7 +10,7 @@ import { AddressZero, HashZero } from '@ethersproject/constants'
 import { Field } from '../state/swap/actions'
 import { Token } from '@phoenixswapv2/core-sdk'
 import { useActiveWeb3React } from '../services/web3'
-import { useBentoMasterContractAllowed } from '../state/bentobox/hooks'
+import { useBentoBalance } from '../state/bentobox/hooks'
 import { useDispatch } from 'react-redux'
 import { useTransactionAdder } from '../state/transactions/hooks'
 
@@ -44,7 +45,7 @@ const useLimitOrderApproveCallback = () => {
   const masterContract = chainId && STOP_LIMIT_ORDER_ADDRESS[chainId]
 
   const pendingApproval = useLimitOrderApprovalPending()
-  const currentAllowed = useBentoMasterContractAllowed(masterContract, account || AddressZero)
+  const currentAllowed = useBentoBalance(masterContract || AddressZero)
   const addTransaction = useTransactionAdder()
 
   // check the current approval status

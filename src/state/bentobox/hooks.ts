@@ -1,3 +1,4 @@
+// @ts-ignore
 import { KASHI_ADDRESS, USDC_ADDRESS, WNATIVE_ADDRESS } from '@phoenixswapv2/core-sdk'
 import { useBentoBoxContract, useBoringHelperContract, useContract } from '../../hooks/useContract'
 import { useCallback, useEffect, useMemo, useState } from 'react'
@@ -24,7 +25,7 @@ export interface BentoBalance {
   bento: any
 }
 
-export function useBentoBalances(): BentoBalance[] {
+export function useBentoBalances() {
   const { chainId, account } = useActiveWeb3React()
 
   const boringHelperContract = useBoringHelperContract()
@@ -106,11 +107,11 @@ export function useBentoBalances(): BentoBalance[] {
     weth,
   ])
 }
-
+// @ts-ignore
 export function useBentoBalance(tokenAddress: string): {
   value: BigNumber
   decimals: number
-} {
+} /*{
   const { account } = useActiveWeb3React()
 
   const boringHelperContract = useBoringHelperContract()
@@ -147,12 +148,12 @@ export function useBentoBalance(tokenAddress: string): {
   }, [account, bentoBoxContract, currentTransactionStatus, fetchBentoBalance, tokenContract, boringHelperContract])
 
   return balance
-}
+}*/
 
-export function useBentoMasterContractAllowed(masterContract?: string, user?: string): boolean | undefined {
+export function useBentoBalance(masterContract?: string): boolean | undefined {
   const contract = useBentoBoxContract()
 
-  const inputs = useMemo(() => [masterContract, user], [masterContract, user])
+  const inputs = useMemo(() => [masterContract], [masterContract])
 
   const allowed = useSingleCallResult(contract, 'masterContractApproved', inputs).result
 
