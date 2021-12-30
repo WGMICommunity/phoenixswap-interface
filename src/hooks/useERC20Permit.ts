@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, JSBI, Percent, Token, TradeType, Trade as V2Trade } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, JSBI, Percent, Token, TradeType, Trade as V2Trade } from '@phoenixswapv2/core-sdk'
 import { DAI, SUSHI, USDC } from '../config/tokens'
 import { useMemo, useState } from 'react'
 
@@ -37,7 +37,7 @@ const PERMITTABLE_TOKENS: {
       name: 'Dai Stablecoin',
       version: '1',
     },
-    [SUSHI[1].address]: { type: PermitType.AMOUNT, name: 'SushiSwap' },
+    [SUSHI[1].address]: { type: PermitType.AMOUNT, name: 'Phoenixswap' },
   },
   [4]: {
     ['0xc7AD46e0b8a400Bb3C915120d284AafbA8fc4735']: {
@@ -45,10 +45,10 @@ const PERMITTABLE_TOKENS: {
       name: 'Dai Stablecoin',
       version: '1',
     },
-    [SUSHI[4].address]: { type: PermitType.AMOUNT, name: 'SushiSwap' },
+    [SUSHI[4].address]: { type: PermitType.AMOUNT, name: 'Phoenixswap' },
   },
   [3]: {
-    [SUSHI[3].address]: { type: PermitType.AMOUNT, name: 'SushiSwap' },
+    [SUSHI[3].address]: { type: PermitType.AMOUNT, name: 'Phoenixswap' },
     ['0x07865c6E87B9F70255377e024ace6630C1Eaa37F']: {
       type: PermitType.AMOUNT,
       name: 'USD Coin',
@@ -56,10 +56,10 @@ const PERMITTABLE_TOKENS: {
     },
   },
   [5]: {
-    [SUSHI[5].address]: { type: PermitType.AMOUNT, name: 'SushiSwap' },
+    [SUSHI[5].address]: { type: PermitType.AMOUNT, name: 'Phoenixswap' },
   },
   [42]: {
-    [SUSHI[42].address]: { type: PermitType.AMOUNT, name: 'SushiSwap' },
+    [SUSHI[42].address]: { type: PermitType.AMOUNT, name: 'Phoenixswap' },
   },
 }
 
@@ -268,7 +268,7 @@ export function useERC20Permit(
 
 const REMOVE_V2_LIQUIDITY_PERMIT_INFO: PermitInfo = {
   version: '1',
-  name: 'SushiSwap LP Token',
+  name: 'Phoenixswap LP Token',
   type: PermitType.AMOUNT,
 }
 

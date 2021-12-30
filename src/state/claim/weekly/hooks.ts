@@ -1,4 +1,4 @@
-import { ChainId, Currency, CurrencyAmount, JSBI, Token, SUSHI } from '@sushiswap/core-sdk'
+import { ChainId, Currency, CurrencyAmount, JSBI, Token, SUSHI } from '@phoenixswapv2/core-sdk'
 import { WEEKLY_MERKLE_ROOT as MERKLE_ROOT } from './../../../constants/index'
 import { getAddress, isAddress } from '@ethersproject/address'
 import { useEffect, useState } from 'react'

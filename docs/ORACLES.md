@@ -1,6 +1,6 @@
 # Oracles
 
-Currently there is two types of oracles which the sushi interface supports, Chainlink & SushiSwap TWAP.
+Currently there is two types of oracles which the phoenix interface supports Phoenixswap TWAP.
 
 ## Chainlink
 
@@ -23,13 +23,13 @@ https://docs.chain.link/docs/huobi-eco-chain-price-feeds/
 
 https://docs.chain.link/docs/avalanche-price-feeds/
 
-Each price feed has a pair token0/token1, SUSHI/ETH or SUSHI/USD for example, decimals, and proxy. We use this information to construct mappings of the price feed to their respectful pair tokens.
+Each price feed has a pair token0/token1, PHX/ETH or PHX/USD for example, decimals, and proxy. We use this information to construct mappings of the price feed to their respectful pair tokens.
 
 Chainlink tokens can be found in src/constants/chainlink/mappings, they are seperated by network.
 
 Any token which is not currently in the Chainlink tokens needs to be added, with the exception of USD, and non-crypto, these should not be added to the Chainlink tokens.
 
-If a newly added token is not in the @sushiswap/default-token-list, it should be added.
+If a newly added token is not in the @phoenixswap/default-token-list, it should be added.
 
 Chainlink mappings can be found in src/constants/chainlink/mappings, they are seperated by network.
 
@@ -45,7 +45,7 @@ Each mapping is keyed by the price feed proxy address, and contains and object w
 
 Tip: USD address is 0x0000000000000000000000000000000000000001 and decimals 8
 
-<!-- ## SushiSwap TWAP
+<!-- ## Phoenixswap TWAP
 
 - Requires two exchange rate updates to start.
 - On creation both current & oracle exchange rate will be set to zero.

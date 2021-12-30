@@ -1,4 +1,4 @@
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@phoenixswapv2/core-sdk'
 
 export enum Feature {
   AMM = 'AMM',
@@ -13,18 +13,9 @@ export enum Feature {
 }
 
 const features = {
-  [ChainId.ETHEREUM]: [
-    Feature.AMM,
-    Feature.LIQUIDITY_MINING,
-    Feature.BENTOBOX,
-    Feature.KASHI,
-    Feature.MIGRATE,
-    Feature.ANALYTICS,
-    Feature.STAKING,
-    Feature.MISO,
-  ],
+  [ChainId.ETHEREUM]: [Feature.AMM],
   [ChainId.ROPSTEN]: [Feature.AMM, Feature.LIQUIDITY_MINING, Feature.BENTOBOX, Feature.KASHI],
-  [ChainId.RINKEBY]: [Feature.AMM, Feature.LIQUIDITY_MINING, Feature.BENTOBOX, Feature.KASHI],
+  [ChainId.RINKEBY]: [Feature.AMM],
   [ChainId.GÖRLI]: [Feature.AMM, Feature.LIQUIDITY_MINING, Feature.BENTOBOX, Feature.KASHI],
   [ChainId.KOVAN]: [Feature.AMM, Feature.LIQUIDITY_MINING, Feature.BENTOBOX, Feature.KASHI],
   [ChainId.BSC]: [Feature.AMM, Feature.BENTOBOX, Feature.KASHI, Feature.MIGRATE, Feature.ANALYTICS],

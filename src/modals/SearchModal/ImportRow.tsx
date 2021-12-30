@@ -7,7 +7,7 @@ import Button from '../../components/Button'
 import { CheckCircle } from 'react-feather'
 import CurrencyLogo from '../../components/CurrencyLogo'
 import ListLogo from '../../components/ListLogo'
-import { Token } from '@sushiswap/core-sdk'
+import { Token } from '@phoenixswapv2/core-sdk'
 import styled from 'styled-components'
 import { WrappedTokenInfo } from '../../state/lists/wrappedTokenInfo'
 

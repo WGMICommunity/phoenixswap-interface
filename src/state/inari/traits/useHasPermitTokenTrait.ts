@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@sushiswap/core-sdk'
+import { CurrencyAmount, Token } from '@phoenixswapv2/core-sdk'
 import { useInariContract } from '../../../hooks/useContract'
 import { useActiveWeb3React } from '../../../services/web3'
 import useTrait, { BaseTrait } from './useTrait'

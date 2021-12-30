@@ -1,4 +1,4 @@
-import { ChainId, Currency, Percent } from '@sushiswap/core-sdk'
+import { ChainId, Currency, Percent } from '@phoenixswapv2/core-sdk'
 import React, { FC, useState } from 'react'
 
 import Gas from '../../components/Gas'
@@ -37,7 +37,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
 
   return (
     <div className="flex items-center justify-between mb-4 space-x-3">
-      <div className="grid grid-cols-3 rounded p-3px bg-dark-800 h-[46px]">
+      <div className="grid grid-cols-2 rounded p-3px bg-dark-800 h-[46px]">
         <NavLink
           activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
           href={{
@@ -47,17 +47,6 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
         >
           <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis ">
             {i18n._(t`Swap`)}
-          </a>
-        </NavLink>
-        <NavLink
-          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
-          href={{
-            pathname: '/limit-order',
-            query: getQuery(input, output),
-          }}
-        >
-          <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis">
-            {i18n._(t`Limit`)}
           </a>
         </NavLink>
         <NavLink

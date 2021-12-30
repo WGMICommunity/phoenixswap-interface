@@ -1,7 +1,7 @@
 import { bentoBoxQuery, bentoStrategiesQuery, kashiPairsQuery } from '../queries/bentobox'
 import { getFraction, toAmount } from '../../../functions'
 
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@phoenixswapv2/core-sdk'
 import { GRAPH_HOST } from '../constants'
 import { getTokenSubset } from './exchange'
 import { pager } from '../functions'

@@ -1,4 +1,4 @@
-import { Currency, Price } from '@sushiswap/core-sdk'
+import { Currency, Price } from '@phoenixswapv2/core-sdk'
 import React, { useCallback } from 'react'
 
 import Typography from '../../../components/Typography'

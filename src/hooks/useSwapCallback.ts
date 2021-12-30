@@ -1,5 +1,5 @@
 import { EIP_1559_ACTIVATION_BLOCK } from '../constants'
-import { ChainId, Currency, Percent, Router, TradeType, Trade as V2Trade } from '@sushiswap/core-sdk'
+import { ChainId, Currency, Percent, Router, TradeType, Trade as V2Trade } from '@phoenixswapv2/core-sdk'
 import { isAddress, isZero } from '../functions/validate'
 import { useRouterContract } from './useContract'
 import { BigNumber } from '@ethersproject/bignumber'

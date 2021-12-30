@@ -1,9 +1,9 @@
 import { ApprovalState, useApproveCallback } from '../../hooks/useApproveCallback'
-import { BAR_ADDRESS, ZERO } from '@sushiswap/core-sdk'
+import { BAR_ADDRESS, ZERO } from '@phoenixswapv2/core-sdk'
 import React, { useState } from 'react'
 import { SUSHI, XSUSHI } from '../../config/tokens'
 import Button from '../../components/Button'
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@phoenixswapv2/core-sdk'
 import Container from '../../components/Container'
 import Dots from '../../components/Dots'
 import Head from 'next/head'
@@ -54,7 +54,7 @@ const fetcher = (query) => request('https://api.thegraph.com/subgraphs/name/matt
 export default function Stake() {
   const { i18n } = useLingui()
   const { account } = useActiveWeb3React()
-  const sushiBalance = useTokenBalance(account ?? undefined, SUSHI[ChainId.ETHEREUM])
+  const sushiBalance = useTokenBalance(account ?? undefined, SUSHI[ChainId.RINKEBY])
   const xSushiBalance = useTokenBalance(account ?? undefined, XSUSHI)
 
   const { enter, leave } = useSushiBar()
@@ -74,7 +74,7 @@ export default function Stake() {
 
   const parsedAmount = usingBalance ? balance : tryParseAmount(input, balance?.currency)
 
-  const [approvalState, approve] = useApproveCallback(parsedAmount, BAR_ADDRESS[ChainId.ETHEREUM])
+  const [approvalState, approve] = useApproveCallback(parsedAmount, BAR_ADDRESS[ChainId.RINKEBY])
 
   const handleInput = (v: string) => {
     if (v.length <= INPUT_CHAR_LIMIT) {

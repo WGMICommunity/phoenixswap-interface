@@ -1,4 +1,4 @@
-import { Currency, Percent, Trade, TradeType } from '@sushiswap/core-sdk'
+import { Currency, Percent, Trade, TradeType } from '@phoenixswapv2/core-sdk'
 
 import { useMemo } from 'react'
 import { useUserSlippageToleranceWithDefault } from '../state/user/hooks'

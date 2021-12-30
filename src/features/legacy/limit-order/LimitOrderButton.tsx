@@ -1,5 +1,5 @@
 import { ApprovalState, useApproveCallback } from '../../../hooks/useApproveCallback'
-import { BENTOBOX_ADDRESS, ChainId, Currency } from '@sushiswap/core-sdk'
+import { BENTOBOX_ADDRESS, ChainId, Currency } from '@phoenixswapv2/core-sdk'
 import { LimitOrder } from '@sushiswap/limit-order-sdk'
 import Button, { ButtonProps } from '../../../components/Button'
 import { Field, setFromBentoBalance } from '../../../state/limit-order/actions'

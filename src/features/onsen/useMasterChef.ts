@@ -69,7 +69,7 @@ export default function useMasterChef(chef: Chef) {
 
           const balanceOf = await sushi?.balanceOf(contract?.address)
 
-          // If MasterChefV2 doesn't have enough sushi to harvest, batch in a harvest.
+          // If MasterChefV2 doesn't have enough phoenix to harvest, batch in a harvest.
           if (pendingSushi.gt(balanceOf)) {
             tx = await contract?.batch(
               [

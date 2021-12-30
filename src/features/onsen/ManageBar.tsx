@@ -24,7 +24,7 @@ import {
   USDC,
   USD,
   ZERO,
-} from '@sushiswap/core-sdk'
+} from '@phoenixswapv2/core-sdk'
 import { getAddress } from '@ethersproject/address'
 import { Chef, PairType } from './enum'
 import { useKashiPair } from '../kashi/context'

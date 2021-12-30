@@ -2,7 +2,7 @@ import { Field, MeowshiState } from '../../pages/tools/meowshi'
 import React, { FC } from 'react'
 import { SUSHI, XSUSHI } from '../../config/tokens'
 
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@phoenixswapv2/core-sdk'
 import Image from 'next/image'
 import Input from '../../components/Input'
 import Typography from '../../components/Typography'
@@ -43,7 +43,7 @@ const CurrencyInputPanel: FC<CurrencyInputPanelProps> = ({ field, meowshiState, 
                     ? '/images/tokens/xsushi-square.jpg'
                     : '/images/tokens/nyan-square.jpg'
                 }
-                alt="SUSHI"
+                alt="PHX"
                 width="62px"
                 height="62px"
                 objectFit="contain"
@@ -59,7 +59,7 @@ const CurrencyInputPanel: FC<CurrencyInputPanelProps> = ({ field, meowshiState, 
                     className="underline cursor-pointer text-blue"
                     onClick={() => setCurrency(currency === XSUSHI ? SUSHI[ChainId.ETHEREUM] : XSUSHI, field)}
                   >
-                    {currencies[field] === SUSHI[ChainId.ETHEREUM] ? i18n._(t`Use xSUSHI`) : i18n._(t`Use SUSHI`)}
+                    {currencies[field] === SUSHI[ChainId.ETHEREUM] ? i18n._(t`Use xPHX`) : i18n._(t`Use PHX`)}
                   </Typography>
                 )}
               </div>

@@ -1,4 +1,4 @@
-import { ChainId, Currency, Token, currencyEquals } from '@sushiswap/core-sdk'
+import { ChainId, Currency, Token, currencyEquals } from '@phoenixswapv2/core-sdk'
 
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'

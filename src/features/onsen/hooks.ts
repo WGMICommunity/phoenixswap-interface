@@ -6,7 +6,7 @@ import {
   MASTERCHEF_V2_ADDRESS,
   MINICHEF_ADDRESS,
   SUSHI,
-} from '@sushiswap/core-sdk'
+} from '@phoenixswapv2/core-sdk'
 import { Chef, PairType } from './enum'
 import { Dispatch, useCallback, useEffect, useMemo, useState } from 'react'
 import { NEVER_RELOAD, useSingleCallResult, useSingleContractMultipleData } from '../../state/multicall/hooks'
@@ -88,7 +88,7 @@ export function usePendingSushi(farm) {
     return [String(farm.id), String(account)]
   }, [farm, account])
 
-  const result = useSingleCallResult(args ? contract : null, 'pendingSushi', args)?.result
+  const result = useSingleCallResult(args ? contract : null, 'pendingPhoenix', args)?.result
 
   const value = result?.[0]
 
@@ -129,7 +129,7 @@ export function useChefPositions(contract?: Contract | null, rewarder?: Contract
     return [...Array(numberOfPools.toNumber()).keys()].map((pid) => [String(pid), String(account)])
   }, [numberOfPools, account])
 
-  const pendingSushi = useSingleContractMultipleData(args ? contract : null, 'pendingSushi', args)
+  const pendingSushi = useSingleContractMultipleData(args ? contract : null, 'pendingPhoenix', args)
 
   const userInfo = useSingleContractMultipleData(args ? contract : null, 'userInfo', args)
 

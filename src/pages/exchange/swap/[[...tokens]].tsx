@@ -1,4 +1,4 @@
-import { ChainId, Currency, CurrencyAmount, JSBI, Token, TradeType, Trade as V2Trade } from '@sushiswap/core-sdk'
+import { ChainId, Currency, CurrencyAmount, JSBI, Token, TradeType, Trade as V2Trade } from '@phoenixswapv2/core-sdk'
 import { ApprovalState, useApproveCallbackFromTrade } from '../../../hooks/useApproveCallback'
 import { BottomGrouping, SwapCallbackError } from '../../../features/legacy/swap/styleds'
 import { ButtonConfirmed, ButtonError } from '../../../components/Button'

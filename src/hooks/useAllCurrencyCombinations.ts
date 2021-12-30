@@ -1,5 +1,5 @@
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST, CUSTOM_BASES } from '../config/routing'
-import { Currency, Token } from '@sushiswap/core-sdk'
+import { Currency, Token } from '@phoenixswapv2/core-sdk'
 
 import flatMap from 'lodash/flatMap'
 import { useActiveWeb3React } from '../services/web3'

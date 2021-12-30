@@ -1,5 +1,5 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@phoenixswapv2/core-sdk'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { NetworkConnector } from '../entities/NetworkConnector'
 import RPC from './rpc'
@@ -84,7 +84,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
       return new LatticeConnector({
         chainId: 1,
         url: RPC[ChainId.ETHEREUM],
-        appName: 'SushiSwap',
+        appName: 'Phoenixswap',
       })
     },
     name: 'Lattice',
@@ -99,7 +99,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
       const WalletLinkConnector = (await import('@web3-react/walletlink-connector')).WalletLinkConnector
       return new WalletLinkConnector({
         url: RPC[ChainId.ETHEREUM],
-        appName: 'SushiSwap',
+        appName: 'Phoenixswap',
         appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png',
       })
     },

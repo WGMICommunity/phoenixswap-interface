@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent, Token } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, Percent, Token } from '@phoenixswapv2/core-sdk'
 import React, { ReactNode } from 'react'
 import { classNames, formatCurrencyAmount } from '../../functions'
 import Lottie from 'lottie-react'

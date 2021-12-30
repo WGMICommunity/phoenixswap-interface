@@ -1,7 +1,7 @@
 import React, { FC, useCallback, useState } from 'react'
 import { useActiveWeb3React } from '../../services/web3'
 import { ApprovalState } from '../../hooks/useApproveCallback'
-import { ZERO } from '@sushiswap/core-sdk'
+import { ZERO } from '@phoenixswapv2/core-sdk'
 import Button, { ButtonProps } from '../../components/Button'
 import { useLingui } from '@lingui/react'
 import { t } from '@lingui/macro'

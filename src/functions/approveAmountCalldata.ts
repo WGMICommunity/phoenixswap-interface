@@ -1,4 +1,4 @@
-import { BigintIsh, Currency, CurrencyAmount, JSBI } from '@sushiswap/core-sdk'
+import { BigintIsh, Currency, CurrencyAmount, JSBI } from '@phoenixswapv2/core-sdk'
 
 import { Interface } from '@ethersproject/abi'
 

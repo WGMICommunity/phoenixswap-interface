@@ -8,7 +8,7 @@ import {
   TradeOptions,
   TradeOptionsDeadline,
   TradeType,
-} from '@sushiswap/core-sdk'
+} from '@phoenixswapv2/core-sdk'
 
 import { getAddress } from '@ethersproject/address'
 import invariant from 'tiny-invariant'

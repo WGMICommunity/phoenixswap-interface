@@ -1,5 +1,5 @@
 import { AutoRow, RowFixed } from '../../components/Row'
-import { Currency, Token } from '@sushiswap/core-sdk'
+import { Currency, Token } from '@phoenixswapv2/core-sdk'
 
 import { AlertTriangle } from 'react-feather'
 import { AutoColumn } from '../../components/Column'

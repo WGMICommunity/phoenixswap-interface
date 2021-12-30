@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, JSBI, Pair, Route, Token, Trade, TradeType } from '@sushiswap/core-sdk'
+import { ChainId, CurrencyAmount, JSBI, Pair, Route, Token, Trade, TradeType } from '@phoenixswapv2/core-sdk'
 
 import { computeRealizedLPFeeAmount } from '../../../src/functions/prices'
 

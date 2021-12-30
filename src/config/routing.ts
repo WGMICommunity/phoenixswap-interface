@@ -59,7 +59,7 @@ import * as MOONRIVER from './moonriver'
 import * as TELOS from './telos'
 
 // a list of tokens by chain
-import { ChainId, Currency, Token, WNATIVE } from '@sushiswap/core-sdk'
+import { ChainId, Currency, Token, WNATIVE } from '@phoenixswapv2/core-sdk'
 
 type ChainTokenList = {
   readonly [chainId: number]: Token[]

@@ -1,4 +1,4 @@
-import { Currency, NATIVE, WNATIVE, currencyEquals } from '@sushiswap/core-sdk'
+import { Currency, NATIVE, WNATIVE, currencyEquals } from '@phoenixswapv2/core-sdk'
 
 import { AutoColumn } from '../../../components/Column'
 import CurrencyLogo from '../../../components/CurrencyLogo'

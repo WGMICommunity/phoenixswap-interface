@@ -1,4 +1,4 @@
-import { ChainId, Currency, CurrencyAmount, Ether, Percent, TradeType, Trade as V2Trade } from '@sushiswap/core-sdk'
+import { ChainId, Currency, CurrencyAmount, Ether, Percent, TradeType, Trade as V2Trade } from '@phoenixswapv2/core-sdk'
 import React, { useMemo } from 'react'
 import { RowBetween, RowFixed } from '../../../components/Row'
 
@@ -86,9 +86,9 @@ export function AdvancedSwapDetails({ trade, allowedSlippage }: AdvancedSwapDeta
 
       <RowBetween>
         <RowFixed>
-          <div className="text-sm text-secondary">{i18n._(t`xSUSHI Fee`)}</div>
+          <div className="text-sm text-secondary">{i18n._(t`xPHX Fee`)}</div>
           <QuestionHelper
-            text={i18n._(t`A portion of each trade (0.05%) goes to xSUSHI holders as a protocol incentive.`)}
+            text={i18n._(t`A portion of each trade (0.05%) goes to xPHX holders as a protocol incentive.`)}
           />
         </RowFixed>
         <div className="text-sm font-bold text-high-emphesis">

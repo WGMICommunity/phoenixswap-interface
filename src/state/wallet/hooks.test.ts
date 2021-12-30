@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@sushiswap/core-sdk'
+import { CurrencyAmount, Token } from '@phoenixswapv2/core-sdk'
 import { serializeBalancesMap } from './hooks'
 
 describe('Wallet Hooks', () => {

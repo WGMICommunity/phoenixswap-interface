@@ -1,4 +1,4 @@
-import { CHAINLINK_ORACLE_ADDRESS, ChainId, Token } from '@sushiswap/core-sdk'
+import { CHAINLINK_ORACLE_ADDRESS, ChainId, Token } from '@phoenixswapv2/core-sdk'
 
 import { AddressZero } from '@ethersproject/constants'
 import { CHAINLINK_PRICE_FEED_MAP } from '../config/oracles/chainlink'
@@ -37,14 +37,14 @@ export abstract class AbstractOracle implements Oracle {
 export class SushiSwapTWAP0Oracle extends AbstractOracle {
   constructor(pair, chainId: ChainId, tokens?: Token[]) {
     super(pair, chainId, tokens)
-    this.name = 'SushiSwap'
+    this.name = 'Phoenixswap'
   }
 }
 
 export class SushiSwapTWAP1Oracle extends AbstractOracle {
   constructor(pair, chainId: ChainId, tokens?: Token[]) {
     super(pair, chainId, tokens)
-    this.name = 'SushiSwap'
+    this.name = 'Phoenixswap'
   }
 }
 

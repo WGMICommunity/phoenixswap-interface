@@ -7,7 +7,7 @@ import {
   MINIMUM_INTEREST_PER_YEAR,
   MINIMUM_TARGET_UTILIZATION,
   STARTING_INTEREST_PER_YEAR,
-} from '@sushiswap/core-sdk'
+} from '@phoenixswapv2/core-sdk'
 
 import { e10, ZERO } from '../../../src/functions'
 import {

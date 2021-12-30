@@ -6,8 +6,8 @@ export default function AnalyticsContainer({ children }): JSX.Element {
   return (
     <>
       <Head>
-        <title>SushiSwap Liquidity Pair (SLP) Analytics | Sushi</title>
-        <meta name="description" content="SushiSwap Liquidity Pair (SLP) Analytics by Sushi" />
+        <title>Phoenixswap Liquidity Pair (PLP) Analytics | Phoenix</title>
+        <meta name="description" content="Phoenixswap Liquidity Pair (SLP) Analytics by Phoenix" />
       </Head>
 
       <Container id="analytics" maxWidth="full" className="grid h-full grid-flow-col grid-cols-10 px-4 mx-auto gap-9">
@@ -19,8 +19,8 @@ export default function AnalyticsContainer({ children }): JSX.Element {
                 href: '/analytics/dashboard',
               },
               {
-                text: 'xSushi',
-                href: '/analytics/xSushi',
+                text: 'xPhoenix',
+                href: '/analytics/xPhoenix',
               },
               {
                 text: 'Farms',

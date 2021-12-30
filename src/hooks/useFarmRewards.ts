@@ -17,7 +17,7 @@ import {
   useSushiPrice,
 } from '../services/graph'
 
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@phoenixswapv2/core-sdk'
 import { getAddress } from '@ethersproject/address'
 import { useActiveWeb3React } from '../services/web3'
 import { useMemo } from 'react'
@@ -106,7 +106,7 @@ export default function useFarmRewards() {
       const rewardPerBlock = (pool.allocPoint / pool.owner.totalAllocPoint) * sushiPerBlock
 
       const defaultReward = {
-        token: 'SUSHI',
+        token: 'PHX',
         icon: 'https://raw.githubusercontent.com/sushiswap/logos/main/network/ethereum/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2.jpg',
         rewardPerBlock,
         rewardPerDay: rewardPerBlock * blocksPerDay,

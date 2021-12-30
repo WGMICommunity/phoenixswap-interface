@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { AddressZero } from '@ethersproject/constants'
-import { ChainId, CurrencyAmount, Percent, Token } from '@sushiswap/core-sdk'
+import { ChainId, CurrencyAmount, Percent, Token } from '@phoenixswapv2/core-sdk'
 
 import { calculateGasMargin, calculateSlippageAmount } from '../../../src/functions/trade'
 

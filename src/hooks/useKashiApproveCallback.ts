@@ -1,4 +1,4 @@
-import { KASHI_ADDRESS } from '@sushiswap/core-sdk'
+import { KASHI_ADDRESS } from '@phoenixswapv2/core-sdk'
 import KashiCooker from '../entities/KashiCooker'
 import { signMasterContractApproval } from '../functions'
 import { useCallback, useEffect, useMemo, useState } from 'react'

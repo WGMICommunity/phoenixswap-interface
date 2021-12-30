@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, JSBI } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, JSBI } from '@phoenixswapv2/core-sdk'
 
 import { BigNumber } from '@ethersproject/bignumber'
 import { parseUnits } from '@ethersproject/units'

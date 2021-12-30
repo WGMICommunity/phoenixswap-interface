@@ -1,4 +1,4 @@
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@phoenixswapv2/core-sdk'
 import NavLink from '../../components/NavLink'
 import React from 'react'
 import { useActiveWeb3React } from '../../services/web3'
@@ -44,20 +44,11 @@ const Menu = ({ positionsLength }) => {
         <>
           <NavLink
             exact
-            href={`/farm?filter=kashi`}
-            activeClassName="font-bold bg-transparent border rounded text-high-emphesis border-transparent border-gradient-r-blue-pink-dark-900"
-          >
-            <a className="flex items-center justify-between px-4 py-6 text-base font-bold border border-transparent rounded cursor-pointer bg-dark-900 hover:bg-dark-800">
-              Kashi Farms
-            </a>
-          </NavLink>
-          <NavLink
-            exact
             href={`/farm?filter=sushi`}
             activeClassName="font-bold bg-transparent border rounded text-high-emphesis border-transparent border-gradient-r-blue-pink-dark-900"
           >
             <a className="flex items-center justify-between px-4 py-6 text-base font-bold border border-transparent rounded cursor-pointer bg-dark-900 hover:bg-dark-800">
-              SushiSwap Farms
+              Phoenixswap Farms
             </a>
           </NavLink>
         </>

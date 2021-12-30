@@ -1,4 +1,4 @@
-import { Currency } from '@sushiswap/core-sdk'
+import { Currency } from '@phoenixswapv2/core-sdk'
 import CurrencyLogo from '../CurrencyLogo'
 import React from 'react'
 import { classNames } from '../../functions'

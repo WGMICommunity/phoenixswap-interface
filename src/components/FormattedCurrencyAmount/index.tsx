@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, JSBI } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, Fraction, JSBI } from '@phoenixswapv2/core-sdk'
 
 import React from 'react'
 

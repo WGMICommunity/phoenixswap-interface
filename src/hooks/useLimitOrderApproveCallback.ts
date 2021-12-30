@@ -7,7 +7,7 @@ import { useDerivedLimitOrderInfo, useLimitOrderApprovalPending, useLimitOrderSt
 import { getAddress } from '@ethersproject/address'
 import { AddressZero, HashZero } from '@ethersproject/constants'
 import { Field } from '../state/swap/actions'
-import { Token } from '@sushiswap/core-sdk'
+import { Token } from '@phoenixswapv2/core-sdk'
 import { useActiveWeb3React } from '../services/web3'
 import { useBentoMasterContractAllowed } from '../state/bentobox/hooks'
 import { useDispatch } from 'react-redux'

@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { CurrencyAmount } from '@sushiswap/core-sdk'
+import { CurrencyAmount } from '@phoenixswapv2/core-sdk'
 import React, { useState } from 'react'
 import Alert from '../../components/Alert'
 import Button, { ButtonError } from '../../components/Button'

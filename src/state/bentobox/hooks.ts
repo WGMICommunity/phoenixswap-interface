@@ -1,4 +1,4 @@
-import { KASHI_ADDRESS, USDC_ADDRESS, WNATIVE_ADDRESS } from '@sushiswap/core-sdk'
+import { KASHI_ADDRESS, USDC_ADDRESS, WNATIVE_ADDRESS } from '@phoenixswapv2/core-sdk'
 import { useBentoBoxContract, useBoringHelperContract, useContract } from '../../hooks/useContract'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
@@ -6,7 +6,6 @@ import { BigNumber } from '@ethersproject/bignumber'
 import ERC20_ABI from '../../constants/abis/erc20.json'
 import { WrappedTokenInfo } from '../lists/wrappedTokenInfo'
 import { e10 } from '../../functions/math'
-import { easyAmount } from '../../functions/kashi'
 import { getAddress } from '@ethersproject/address'
 import { toAmount } from '../../functions/bentobox'
 import { useActiveWeb3React } from '../../services/web3'
@@ -92,11 +91,6 @@ export function useBentoBalances(): BentoBalance[] {
           decimals: token.decimals,
           balance: token.address === weth ? uiData.result[0].ethBalance : balanceData.result[0][i].balance,
           bentoBalance: balanceData.result[0][i].bentoBalance,
-          wallet: easyAmount(
-            token.address === weth ? uiData.result[0].ethBalance : balanceData.result[0][i].balance,
-            full
-          ),
-          bento: easyAmount(toAmount(full, balanceData.result[0][i].bentoBalance), full),
         }
       })
       .filter((token) => token.balance.gt('0') || token.bentoBalance.gt('0'))

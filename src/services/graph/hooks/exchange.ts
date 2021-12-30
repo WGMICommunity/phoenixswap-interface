@@ -27,7 +27,7 @@ import {
   getPairs,
 } from '../fetchers'
 import useSWR, { SWRConfiguration } from 'swr'
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@phoenixswapv2/core-sdk'
 import { ethPriceQuery } from '../queries'
 import { useActiveWeb3React } from '../../../services/web3'
 import { useBlock } from './blocks'
